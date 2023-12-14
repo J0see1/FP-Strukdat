@@ -5,12 +5,12 @@ using namespace std;
 // Abstract class
 class Item {
 protected:
-    static int nextId;  // Static variable to hold the next ID
+    static int nextId; 
     string name;
     int id;
 public:
-    Item(const string& name) : name(name), id(nextId++) {}  // Increment nextId each time a new object is created
-    virtual void display() = 0; // Pure virtual function
+    Item(const string& name) : name(name), id(nextId++) {}
+    virtual void display() = 0; 
     
     int getId() const {
         return id;
@@ -48,7 +48,6 @@ private:
 public:
     void addItem(Item* item) {
         items.push_back(item);
-        // Add a new row and column to the adjacency matrix
         for (auto& row : adjacencyMatrix) {
             row.push_back(false);
         }
@@ -116,8 +115,6 @@ public:
         }
         cout << "Item not found." << endl;
     }
-
-
 };
 
 int main() {
@@ -185,9 +182,8 @@ int main() {
                 storage.displayItems();
                 break;
             case 5:
-                // Add your code here to handle searching an item
                 cout << endl;
-                cout << "Enter item's id . . ." << endl;
+                cout << "Enter bundle's id . . ." << endl;
                 cin >> itemId;
                 storage.displayBundleItems(itemId);
                 break;
