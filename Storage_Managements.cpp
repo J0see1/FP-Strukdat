@@ -150,6 +150,7 @@ int main() {
                         getline(cin, itemName);
                         digitalItem = new DigitalItem(itemName);
                         storage.addItem(digitalItem);
+                        cout << "Digital Item Added" << endl;
                         break;
                     case 2:
                         cout << endl;
@@ -158,6 +159,7 @@ int main() {
                         getline(cin, itemName);
                         physicalItem = new PhysicalItem(itemName);    
                         storage.addItem(physicalItem);
+                        cout << "Physical Item Added" << endl;
                         break;
                     default:
                         cout << "Invalid selection." << endl;
@@ -168,6 +170,7 @@ int main() {
                 cout << "Enter item's id . . ." << endl;
                 cin >> itemId;
                 storage.deleteItem(itemId);
+                cout << "Item Deleted" << endl;
                 break;
             case 3:
                 cout << endl;
@@ -176,6 +179,7 @@ int main() {
                 cout << "Enter new item's name  . . ." << endl;
                 cin >> itemName;
                 storage.updateItem(itemId, itemName);
+                cout << "Item Updated" << endl;
                 break;
             case 4:
                 cout << "Displaying . . ." << endl;
@@ -183,7 +187,7 @@ int main() {
                 break;
             case 5:
                 cout << endl;
-                cout << "Enter bundle's id . . ." << endl;
+                cout << "Enter item's id . . ." << endl;
                 cin >> itemId;
                 storage.displayBundleItems(itemId);
                 break;
@@ -194,6 +198,7 @@ int main() {
                 cout << "Enter item's id . . ." << endl;
                 cin >> itemId2;
                 storage.addRelationship(itemId1, itemId2);
+                cout << "Bundle Added" << endl;
                 break;
             case 7:
                 cout << "Exiting . . ." << endl;
